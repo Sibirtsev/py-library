@@ -1,0 +1,11 @@
+<table class="table table-hover">
+    <tr>
+        <td>
+            <h2>{{book.title}}</h2>
+
+            <p>{% for author in book.authors %}
+    {{ author.name_ru }}{% if not loop.last %}, {% endif %}
+    {% endfor %}</p>
+        </td>
+    </tr>
+</table>

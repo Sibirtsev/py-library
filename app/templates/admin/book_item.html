@@ -1,0 +1,9 @@
+<tr>
+    <td>{{ book.isbn }}</td>
+    <td>{{ book.title }}</td>
+    <td>{% for author in book.authors %}
+    {{ author.name_ru }}{% if not loop.last %}, {% endif %}
+    {% endfor %}</td>
+    <td>rr</td>
+    <td>sit</td>
+</tr>

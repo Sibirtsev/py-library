@@ -1,0 +1,28 @@
+{% extends "admin/base.html" %}
+{% block content %}
+<h1>Hi, {{g.user.login}}!</h1>
+
+<h1 class="page-header">Books</h1>
+
+<h2 class="sub-header">Section title</h2>
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+        <tr>
+            <th>#</th>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+            <th>Header</th>
+        </tr>
+        </thead>
+        <tbody>
+{% for book in books %}
+    {% include 'admin/book_item.html' %}
+{% endfor %}
+
+{% endblock %}
+        </tbody>
+    </table>
+</div>
+
